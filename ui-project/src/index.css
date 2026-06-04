@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* to remove scrollbar of rightontent div */
+#right::-webkit-scrollbar{
+    display: none;
+}
