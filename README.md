@@ -1,5 +1,11 @@
 # React Projects
-A collection of my React mini projects.
+
+A collection of React projects built while learning and exploring modern frontend development.
 
 ## Projects
-- UI Project
+
+| Project    | Description                                                       |
+| ---------- | ----------------------------------------------------------------- |
+| UI Project | Simple UI built using React, props, components, and Tailwind CSS. |
+| Notes App  | Responsive notes application built with React.                    |
+
