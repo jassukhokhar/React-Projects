@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0058be;
+  --color-primary-light: #d8e2ff;
+  --color-primary-hover: #004395;
+  --color-success: #006c49;
+  --color-success-light: #d1fae5;
+  --color-success-dark: #064e3b;
+  --color-danger: #b61722;
+  --color-danger-light: #fee2e2;
+  --color-danger-dark: #7f1d1d;
+  
+  --color-brand-bg-light: #f8f9ff;
+  --color-brand-surface-light: #ffffff;
+  --color-brand-container-light: #eff4ff;
+  --color-brand-border-light: #e2e8f0;
+  
+  --color-brand-bg-dark: #121212;
+  --color-brand-surface-dark: #1e1e1e;
+  --color-brand-container-dark: #2d2d2d;
+  --color-brand-border-dark: #3a3a3a;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.expense-list::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.expense-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.expense-list::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 20px;
+}
+.dark .expense-list::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.5);
+}
+
+input, select {
+  transition: all 0.2s ease-in-out;
+}
