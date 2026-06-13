@@ -3,13 +3,13 @@ import ExpenseForm from './components/ExpenseForm';
 import ExpenseList from './components/ExpenseList';
 import Filter from './components/Filter';
 import Summary from './components/Summary';
-import { 
-  Wallet, 
-  Sun, 
-  Moon, 
-  Bell, 
-  Settings, 
-  BarChart3, 
+import {
+  Wallet,
+  Sun,
+  Moon,
+  Bell,
+  Settings,
+  BarChart3,
   LayoutDashboard,
   HelpCircle,
   LogOut,
@@ -64,7 +64,7 @@ function App() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [editingExpense, setEditingExpense] = useState(null);
-  
+
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches);
@@ -123,9 +123,9 @@ function App() {
 
   return (
     <div className="bg-brand-bg-light dark:bg-brand-bg-dark text-slate-800 dark:text-slate-100 min-h-screen flex transition-colors duration-300">
-      
+
       <nav className="hidden lg:flex flex-col h-screen fixed left-0 top-0 p-6 bg-brand-surface-light dark:bg-brand-surface-dark border-r border-brand-border-light dark:border-brand-border-dark w-64 z-20 transition-all duration-300">
-        
+
         <div className="mb-8 flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shadow-sm shadow-primary/20">
             <Wallet size={22} />
@@ -136,13 +136,13 @@ function App() {
         </div>
 
         <div className="flex items-center gap-3.5 mb-8 p-3 rounded-2xl bg-brand-container-light dark:bg-brand-container-dark/40 border border-brand-border-light dark:border-brand-border-dark/60">
-          <img 
-            alt="Jassu Khokhar" 
-            className="w-10 h-10 rounded-full object-cover border border-white dark:border-slate-800 shadow-xs" 
+          <img
+            alt="Sarah Jenkins"
+            className="w-10 h-10 rounded-full object-cover border border-white dark:border-slate-800 shadow-xs"
             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150"
           />
           <div>
-            <p className="font-bold text-xs text-slate-850 dark:text-slate-200">Jassu Khokhar</p>
+            <p className="font-bold text-xs text-slate-850 dark:text-slate-200">Sarah Jenkins</p>
             <p className="text-[10px] text-slate-450 dark:text-slate-400 mt-0.5 font-medium">Wealth Manager</p>
           </div>
         </div>
@@ -194,7 +194,7 @@ function App() {
                 <Wallet className="text-primary" size={24} />
                 <span className="font-bold text-lg text-primary dark:text-primary-light">FinTrack</span>
               </div>
-              <button 
+              <button
                 onClick={() => setMobileSidebarOpen(false)}
                 className="p-1 hover:bg-slate-100 dark:hover:bg-brand-container-dark rounded-lg"
               >
@@ -203,13 +203,13 @@ function App() {
             </div>
             <div className="flex-1 space-y-4">
               <div className="flex items-center gap-3 mb-6 p-2 rounded-xl bg-brand-container-light dark:bg-brand-container-dark/50 border border-brand-border-light dark:border-brand-border-dark">
-                <img 
-                  alt="Jassu" 
+                <img
+                  alt="Sarah"
                   className="w-8 h-8 rounded-full object-cover border border-white"
                   src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150"
                 />
                 <div>
-                  <p className="font-bold text-xs text-slate-800 dark:text-slate-200">Jassu Khokhar</p>
+                  <p className="font-bold text-xs text-slate-800 dark:text-slate-200">Sarah Jenkins</p>
                 </div>
               </div>
               <ul className="space-y-1">
@@ -248,11 +248,11 @@ function App() {
       )}
 
       <div className="flex-1 flex flex-col lg:ml-64 transition-all duration-300">
-        
+
         <header className="bg-brand-surface-light dark:bg-brand-surface-dark border-b border-brand-border-light dark:border-brand-border-dark sticky top-0 z-10 transition-colors duration-300">
           <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
             <div className="flex items-center gap-3 lg:hidden">
-              <button 
+              <button
                 onClick={() => setMobileSidebarOpen(true)}
                 className="p-1.5 hover:bg-slate-100 dark:hover:bg-brand-container-dark rounded-xl text-slate-600 dark:text-slate-300 cursor-pointer"
               >
@@ -260,7 +260,7 @@ function App() {
               </button>
               <span className="font-bold text-lg text-primary dark:text-primary-light">FinTrack</span>
             </div>
-            
+
             <div className="hidden lg:block">
               <h1 className="text-xl font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
                 Financial Dashboard
@@ -268,20 +268,20 @@ function App() {
             </div>
 
             <div className="flex items-center gap-3">
-              <button 
+              <button
                 onClick={() => setIsDarkMode(prev => !prev)}
                 className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary-light transition-all p-2 rounded-xl bg-slate-50 hover:bg-slate-100 dark:bg-brand-container-dark/50 dark:hover:bg-brand-container-dark cursor-pointer border border-brand-border-light dark:border-brand-border-dark"
                 title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
               >
                 {isDarkMode ? <Sun size={16} /> : <Moon size={16} />}
               </button>
-              <button 
+              <button
                 className="text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary-light transition-all p-2 rounded-xl bg-slate-50 hover:bg-slate-100 dark:bg-brand-container-dark/50 dark:hover:bg-brand-container-dark cursor-pointer border border-brand-border-light dark:border-brand-border-dark"
               >
                 <Bell size={16} />
               </button>
-              <img 
-                alt="Sarah" 
+              <img
+                alt="Sarah Jenkins"
                 className="w-8 h-8 rounded-full border border-brand-border-light dark:border-brand-border-dark lg:hidden"
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150"
               />
@@ -290,13 +290,13 @@ function App() {
         </header>
 
         <main className="flex-1 p-6 max-w-7xl w-full mx-auto space-y-6 overflow-y-auto">
-          
+
           <Summary expenses={expenses} />
- 
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            
+
             <div className="lg:col-span-4 lg:sticky lg:top-24">
-              <ExpenseForm 
+              <ExpenseForm
                 onAddExpense={handleAddExpense}
                 onUpdateExpense={handleUpdateExpense}
                 editingExpense={editingExpense}
@@ -305,15 +305,15 @@ function App() {
             </div>
 
             <div className="lg:col-span-8 space-y-6">
-              
-              <Filter 
+
+              <Filter
                 activeCategory={activeCategory}
                 onCategoryChange={setActiveCategory}
                 searchQuery={searchQuery}
                 onSearchChange={setSearchQuery}
               />
-              
-              <ExpenseList 
+
+              <ExpenseList
                 expenses={filteredExpenses}
                 onEdit={handleEditExpense}
                 onDelete={handleDeleteExpense}
